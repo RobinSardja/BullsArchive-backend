@@ -6,6 +6,9 @@ const middleware = require('./utils/middleware')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
  
+//YT TUTORIAL: https://youtu.be/EVOFt8Its6I
+const data = new FormData();
+
 // MongoDB Connection
 console.log('Connecting to', config.MONGO_URI)
 
