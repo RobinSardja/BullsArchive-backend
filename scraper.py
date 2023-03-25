@@ -30,13 +30,10 @@ def main():
     string_two = split_string[2] 
     course_list = [string_one, string_two]
     split_courses_list.append(course_list)
-  
-  courses_dictionary = { i+1: {
-    'number': subarray[0],
-    'name': subarray[1]
-  } for i, subarray in enumerate(split_courses_list) }
 
-  json_courses = json.dumps(courses_dictionary, indent=4)
+  courses_array_of_objects = [{'name': item[1], 'number': item[0]} for item in split_courses_list]
+
+  json_courses = json.dumps(courses_array_of_objects, indent=4)
 
   with open('my_courses.json', 'w') as f:
     f.write(json_courses)
