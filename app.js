@@ -5,11 +5,16 @@ const config = require('./utils/config')
 const middleware = require('./utils/middleware')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
- 
-// MongoDB Connection
+
+const coursesRouter = require('./controllers/courses')
+
 console.log('Connecting to', config.MONGO_URI)
 
-mongoose.connect(config.MONGO_URI)
+mongoose
+  .connect(config.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => {
     console.log('connected to MongoDB')
   })
@@ -24,7 +29,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 // Routers
-
+app.use('/courses', coursesRouter)
 
 // Middleware
 
