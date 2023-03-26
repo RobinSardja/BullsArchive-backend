@@ -1,5 +1,4 @@
-//YT TUTORIAL: https://youtu.be/EVOFt8Its6I
-//IMPORTANT FOR FRONTEND: 11:00
+//form posting script to MongoDB atlas
 
 const express = require("express");
 const multer = require("multer");

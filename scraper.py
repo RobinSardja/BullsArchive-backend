@@ -1,3 +1,5 @@
+#USF course catalog web scraper
+
 import requests
 import json
 from bs4 import BeautifulSoup
