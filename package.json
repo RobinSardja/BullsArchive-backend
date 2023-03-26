@@ -4,6 +4,7 @@
   "description": "BullsArchive backend",
   "main": "index.js",
   "scripts": {
+    "buildui": "rm -rf build && cd ../BullsArchive-frontend && npm run build && cp -r build ../BullsArchive-backend",
     "dev": "nodemon index.js",
     "db": "nodemon populatedb.js",
     "test": "echo \"Error: no test specified\" && exit 1"
