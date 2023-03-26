@@ -24,6 +24,5 @@ coursesRouter.get('/:id', async (req, res, next) => {
   }
 })
 
-coursesRouter.post()
 
 module.exports = coursesRouter
